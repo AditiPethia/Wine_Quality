@@ -19,8 +19,8 @@ calculate_r2 <- function(actual, predicted) {
 }
 
 # Load datasets
-red_wine <- read.csv("winequality-red.csv")     #add file path
-white_wine <- read.csv("winequality-white.csv")   #add file path
+red_wine <- read.csv("winequality-red.csv")     # Add file path
+white_wine <- read.csv("winequality-white.csv")   # Add file path
 
 # Add wine type
 red_wine$wine_type <- "red"
