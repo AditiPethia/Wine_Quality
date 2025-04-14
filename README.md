@@ -138,6 +138,15 @@ While both Lasso and Random Forest showed improvements with their respective tra
 The performance improvements seen with both models emphasize the importance of data preprocessing in enhancing the accuracy and reliability of machine learning models, particularly when dealing with datasets containing skewed distributions or extreme values.
 
 
+# References 
+Cortez, P., Cerdeira, A., Almeida, F., Matos, T., & Reis, J. (2009). Wine Quality [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C56S3T.
+
+Htut, K. S. (2020, February 29). Log transformation: Purpose and interpretation. Medium. https://medium.com/@kyawsawhtoon/log-transformation-purpose-and-interpretation-9444b4b049c9
+
+Guillame-Bert, M., & Teytaud, O. (2018). Exact Distributed Training: Random Forest with Billions of Examples. arXiv preprint arXiv:1804.06755. Retrieved from https://arxiv.org/abs/1804.06755
+
+Shaw, B., Suman, A. K., & Chakraborty, B. (2020). Wine quality analysis using machine learning. In Advances in Intelligent Systems and Computing (Vol. 937, pp. 239–247). Springer. https://doi.org/10.1007/978-981-13-7403-6_23
+
 
 
 
