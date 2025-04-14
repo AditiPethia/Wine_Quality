@@ -14,40 +14,29 @@ The data when downloaded was not in the correct format.
 The data was delimited in MS Excel in order to separate it into columns for better readability and to easily work on the data. 
 
 ### 2. Data Preparation
-Both, red and white wine data sets were successfully loaded onto the R workspace for further analysis. As part of preliminary data cleaning, the data set was checked for missing values.
-Data was cleaned before moving forward, as an impure data set would introduce bias in the models which is not desirable for accuracy of our models. 
+As part of preliminary data cleaning, the data set was checked for missing values.
+Data was cleaned before moving forward. 
 For creating a more unified dataset for comprehensive analysis and modeling, the two datasets were merged. By merging the datasets, a new wine_type column was added to treat wine type as a categorical variable to model any potential differences in wine quality based on wine type. Merging the datasets allows for a more holistic approach to our models. Since the dataset is not very large, merging the datasets gives the model enough data to work with. It allows for a more reliable model building.
  wine_type was converted to factor for the following reasons:
 
-a) Model Interpretation: When wine_type is included in the models, R treats it as a categorical variable rather than a numerical one. This allows the model to recognize “red” and “white” as two different categories and not numerical values.
+a) Model Interpretation
 
-b) Storage efficiency: Factors are more memory efficient for categorical data compared to character variables. When R recognizes a factor, it stores the variable as integers internally, which makes processing large datasets more efficient.
-
-c) Result Interpretation: Factors allow us to clearly see the influence of each category (red and white in this case) in the models.
-
+b) Storage efficiency
+c) Result Interpretation
 Another method for data cleaning is checking for duplicates. Duplicates were found in the dataset however not removed for the following reasons:
-
-a) Duplicate entries signify repeated observations: In certain instances, duplicates may represent legitimate repeated measurements of the same entity, thereby elucidating the underlying data distribution more effectively. Upon removal, the models may forfeit critical information, leading to diminished performance which was indicated by an increase in RMSE values.
-
-b)Model Performance and Variability: Certain models, such as Random Forest, exhibit improved performance with more data volume. Guillame-Bert and Teytaud (2018) demonstrated that “Random Forest benefits from being trained on more data, even in the case of already gigantic datasets”. Eliminating duplicates, which reinforce patterns during training, may diminish the influence of specific observations, resulting in increased variability and increase in the number of  mistakes on novel or unseen data. Since the number of observations were less to begin with, removing duplicates led to diminishing the size of the dataset to a great extent which is neither sufficient nor desired for the accuracy of the models. 
+a) Duplicate entries signify repeated observations
+b)Model Performance and Variability
 
 # Exploratory Data Analysis
 ## Distribution of Predictor Variables
 
-The Exploratory Data Analysis began with checking the distribution of each numerical predictor variable. Histograms were created for each variable, to graphically illustrate their distribution, in order to highlight significant attributes of the dataset.  Multiple predictors showed significant skewness:
-The residual sugar showed a prominent positive skew, with the majority of  values clustered at the lower end of the spectrum and a lengthy tail extending towards elevated values.
-Chlorides showed a positive skew, with values concentrated at the lower end.
-Both free sulphur dioxide and total sulphur dioxide demonstrated right-skewed distributions.
-Volatile acidity and citric acid showed a more modest skewness.
+The Exploratory Data Analysis began with checking the distribution of each numerical predictor variable. Histograms were created for each variable, to graphically illustrate their distribution, in order to highlight significant attributes of the dataset.  Multiple predictors showed significant skewness.
 The distribution patterns suggested that data transformations would be helpful and beneficial prior to modelling to rectify the non-normal distributions of numerous predictors.
 
 ## Correlation of Predictor Variables with Target Variable
 
 To see which variable(s) impacted the quality of wine the most, correlation analysis was performed and matrix was plotted for visualization.
-From the heat map above the following observations can be made:
-Sure! Here's the same information in **bullet point format** instead of a table:
-
----
+From the heat map the following observations can be made:
 
 ### 🔍 Observations from the Heat Map:
 
